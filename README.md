@@ -1,3 +1,42 @@
+TUI [Matrix](https://matrix.org/) client in a single Bash script.
+
+
+# Features
+
+- `tmux` windows for rooms.
+- Read-only.
+
+
+# Dependencies
+
+- `bash` - The script interpreter.
+- `tmux` - The TUI framework.
+- `curl`, `jq` - Communicating with the homeserver.
+- `mkfifo`, `mktemp` - Communication between the `tmux` windows.
+- `hostname`, `sha256sum`, `/etc/machine-id` - Used to derive the device ID and display name when logging in.
+
+
+# Usage
+
+```sh
+./matrix-client.sh <user_id>
+```
+
+Example:
+
+```sh
+./matrix-client.sh '@arnavion:arnavion.dev'
+```
+
+
+# TODO
+
+- Send events.
+- Mark events as read on homeserver.
+- Update events for redactions and replace.
+- Custom mouse events to support scrolling into prev batch.
+
+
 # License
 
 ```
